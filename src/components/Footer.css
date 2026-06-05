@@ -1,0 +1,146 @@
+.footer {
+  background: #000;
+  color: #bfbfbf;
+  padding: 45px 0 25px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  max-width: 1450px;
+  margin: auto;
+  padding: 0 60px;
+}
+
+.footer-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  color: white;
+}
+
+.logo-zone {
+  color: #ff2745;
+  font-size: 42px;
+  font-weight: 900;
+}
+
+.footer-logo span {
+  font-size: 22px;
+}
+
+.footer-desc {
+  max-width: 980px;
+  margin: 28px auto 70px;
+  text-align: center;
+  line-height: 1.8;
+  font-size: 17px;
+}
+
+.footer-links {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px 120px;
+  margin-bottom: 60px;
+  font-size: 20px;
+}
+
+.footer-links a {
+  color: #d0d0d0;
+  text-decoration: none;
+}
+
+.footer-info {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1.3fr;
+  gap: 60px;
+  margin-bottom: 60px;
+}
+
+.footer h3 {
+  color: white;
+  font-size: 20px;
+  margin-bottom: 22px;
+}
+
+.footer p,
+.footer li {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.icons {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.icons span {
+  width: 32px;
+  height: 32px;
+  background: #1877f2;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.cert {
+  width: 110px;
+}
+
+.payment {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.payment span {
+  background: white;
+  color: #111;
+  font-size: 12px;
+  padding: 8px 10px;
+  border-radius: 4px;
+  font-weight: 700;
+}
+
+.eventista {
+  text-align: center;
+  color: #ff2745;
+  font-size: 36px;
+  margin: 40px 0;
+}
+
+.footer-address {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 70px;
+}
+
+.footer-address ul {
+  padding-left: 20px;
+}
+
+.copyright {
+  text-align: center;
+  margin-top: 70px;
+  font-size: 16px;
+}
+
+@media (max-width: 900px) {
+  .footer-links,
+  .footer-info,
+  .footer-address {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-container {
+    padding: 0 24px;
+  }
+
+  .footer-logo {
+    flex-direction: column;
+  }
+}

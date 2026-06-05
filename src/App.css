@@ -1,0 +1,313 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #021b30;
+  color: white;
+}
+
+.app {
+  min-height: 100vh;
+  background: #021b30;
+}
+
+/* HEADER */
+.header {
+  height: 72px;
+  background: #020202;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 8%;
+  position: relative;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: 900;
+  color: #6ffaff;
+  letter-spacing: 1.5px;
+  text-shadow: 0 0 12px rgba(111, 250, 255, 0.8);
+}
+
+.nav {
+  display: flex;
+  gap: 38px;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.nav a:hover {
+  color: #6ffaff;
+}
+
+/* TABS */
+.tabs {
+  height: 58px;
+  background: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 22px;
+  position: relative;
+  z-index: 10;
+}
+
+.tabs a,
+.tabs span {
+  color: #dffcff;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.tabs .active {
+  color: #6ffaff;
+  font-weight: bold;
+}
+
+/* PAGE */
+.page {
+  min-height: calc(100vh - 130px);
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  min-height: calc(100vh - 130px);
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0, 220, 240, 0.12) 0%,
+      rgba(0, 160, 180, 0.2) 35%,
+      rgba(0, 45, 75, 0.45) 65%,
+      rgba(0, 15, 40, 0.95) 100%
+    ),
+    url("./assets/background.png");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* LỚP PHỦ XANH */
+.overlay {
+  position: absolute;
+  inset: 30;
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(180, 255, 255, 0.08) 0%,
+      rgba(0, 220, 240, 0.08) 35%,
+      rgba(0, 30, 60, 0.45) 100%
+    );
+  z-index: 1;
+}
+
+/* VÒNG SÁNG LỚN */
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 950px;
+  height: 950px;
+  border-radius: 50%;
+  z-index: 2;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(255, 255, 255, 0.45) 0%,
+      rgba(180, 255, 255, 0.32) 28%,
+      rgba(60, 255, 255, 0.18) 50%,
+      rgba(0, 255, 255, 0.08) 65%,
+      transparent 78%
+    );
+
+  filter: blur(12px);
+  opacity: 0.95;
+  animation: pulseLight 5s infinite ease-in-out;
+}
+
+/* VÒNG SÓNG LAN TỎA */
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 980px;
+  height: 980px;
+  border-radius: 50%;
+  z-index: 3;
+
+  border: 3px solid rgba(190, 255, 255, 0.18);
+
+  box-shadow:
+    0 0 0 22px rgba(190, 255, 255, 0.13),
+    0 0 0 44px rgba(190, 255, 255, 0.11),
+    0 0 0 66px rgba(190, 255, 255, 0.09),
+    0 0 0 88px rgba(190, 255, 255, 0.07),
+    0 0 0 110px rgba(190, 255, 255, 0.05),
+    0 0 0 132px rgba(190, 255, 255, 0.03);
+
+  opacity: 0.9;
+}
+
+/* NỘI DUNG */
+.heroContent {
+  position: relative;
+  z-index: 5;
+  padding: 40px;
+  color: white;
+
+  text-shadow:
+    0 0 10px rgba(120, 255, 255, 0.9),
+    0 0 25px rgba(120, 255, 255, 0.75),
+    0 0 45px rgba(120, 255, 255, 0.5);
+}
+
+.heroContent h4 {
+  font-size: 24px;
+  letter-spacing: 5px;
+  color: #b8ffff;
+  margin-bottom: 18px;
+  font-weight: 700;
+}
+
+.heroContent h1 {
+  font-size: 72px;
+  line-height: 1.1;
+  font-weight: 900;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.star {
+  font-size: 46px;
+  color: white;
+  margin-bottom: 18px;
+  text-shadow:
+    0 0 12px white,
+    0 0 30px #8effff;
+}
+
+.heroContent p {
+  font-size: 22px;
+  letter-spacing: 4px;
+  color: #e5ffff;
+  margin-bottom: 14px;
+  font-weight: 600;
+}
+
+.heroContent h2 {
+  font-size: 48px;
+  font-weight: 900;
+  color: #76fbff;
+  letter-spacing: 8px;
+}
+
+/* ANIMATION */
+@keyframes pulseLight {
+  0% {
+    transform: scale(0.96);
+    opacity: 0.85;
+  }
+
+  50% {
+    transform: scale(1.02);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(0.96);
+    opacity: 0.85;
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .header {
+    padding: 0 24px;
+  }
+
+  .logo {
+    font-size: 22px;
+  }
+
+  .nav {
+    gap: 18px;
+  }
+
+  .nav a {
+    font-size: 14px;
+  }
+
+  .heroContent h1 {
+    font-size: 46px;
+  }
+
+  .heroContent h2 {
+    font-size: 32px;
+  }
+
+  .hero::before {
+    width: 620px;
+    height: 620px;
+  }
+
+  .hero::after {
+    width: 650px;
+    height: 650px;
+  }
+}
+
+@media (max-width: 600px) {
+  .header {
+    height: auto;
+    padding: 18px;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .tabs {
+    height: 54px;
+  }
+
+  .hero {
+    min-height: calc(100vh - 160px);
+  }
+
+  .heroContent h4 {
+    font-size: 16px;
+  }
+
+  .heroContent h1 {
+    font-size: 34px;
+  }
+
+  .heroContent p {
+    font-size: 15px;
+  }
+
+  .heroContent h2 {
+    font-size: 26px;
+    letter-spacing: 4px;
+  }
+}
